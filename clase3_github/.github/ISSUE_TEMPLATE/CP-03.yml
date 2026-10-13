@@ -1,0 +1,46 @@
+name: "CP-03 — Rechazar contraseña de siete caracteres"
+description: "Caso negativo / valor límite de TS-01 / RF-03; v1 permite el registro incorrectamente."
+title: "[CP-03] Rechazar contraseña de siete caracteres"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Práctica:** Clase 3 — TS-01 · **Versión:** v1 · HTML local · Demostración
+
+        **Requisito:** RF-03 — Longitud de contraseña · **Tipo:** Negativo / valor límite
+  - type: markdown
+    attributes:
+      value: |
+        ### Precondiciones
+        - Abrir `app/registro_v1.html`.
+        - Pulsar **Reiniciar prueba** y confirmar total 0.
+
+        ### Datos de prueba
+        - Nombre: `Ana`
+        - Correo: `ana@example.com`
+        - Contraseña ficticia: `Abcd123` (7 caracteres)
+
+        ### Pasos
+        1. Reiniciar la prueba.
+        2. Escribir `Ana`.
+        3. Escribir `ana@example.com`.
+        4. Escribir `Abcd123`.
+        5. Pulsar **Registrarse**.
+        6. Revisar mensaje y panel de resultados.
+
+        ### Resultado esperado
+        `La contraseña debe tener al menos 8 caracteres`. Cuenta: **No**. Total: **0**.
+
+        ### Resultado observado
+        `Registro exitoso`. Cuenta: **Sí**. Total: **1**, aunque la longitud reportada es de 7 caracteres.
+
+        ### Estado
+        **FALLIDO** — permite el registro con contraseña menor al mínimo de ocho caracteres de RF-03.
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Evidencia de ejecución
+      description: "La captura está en evidencias/CP-03_evidencia.png. Reemplace USUARIO/REPOSITORIO por el repositorio real."
+      value: "![Evidencia de ejecución CP-03](https://raw.githubusercontent.com/USUARIO/REPOSITORIO/main/evidencias/CP-03_evidencia.png)"
+    validations:
+      required: true

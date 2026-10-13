@@ -1,0 +1,7 @@
+EVIDENCIAS CP-01 / CP-02 / CP-03
+
+CP-01_evidencia_v2.png: resultado esperado, registro válido (exitoso; Sí; total 1).
+CP-02_evidencia_v2.png: resultado esperado, correo vacío (error “El correo es obligatorio”; No; total 0).
+CP-03_evidencia_v2.png: resultado esperado, contraseña Abcd123 de 7 caracteres (error mínimo 8; No; total 0).
+
+v1_observado/ contiene capturas reales de la app original v1. En ellas CP-02 y CP-03 aparecen como Registro exitoso, Cuenta Sí, Total 1; es el defecto encontrado, no el resultado esperado.

@@ -1,0 +1,46 @@
+name: "CP-02 — Rechazar registro con correo vacío"
+description: "Caso negativo de TS-01 / RF-02; el resultado observado en v1 no cumple lo esperado."
+title: "[CP-02] Rechazar registro con correo vacío"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Práctica:** Clase 3 — TS-01 · **Versión:** v1 · HTML local · Demostración
+
+        **Requisito:** RF-02 — Correo obligatorio · **Tipo:** Negativo
+  - type: markdown
+    attributes:
+      value: |
+        ### Precondiciones
+        - Abrir `app/registro_v1.html`.
+        - Pulsar **Reiniciar prueba** y confirmar total 0.
+
+        ### Datos de prueba
+        - Nombre: `Ana`
+        - Correo: vacío (sin espacios)
+        - Contraseña ficticia: `Abcd1234` (8 caracteres)
+
+        ### Pasos
+        1. Reiniciar la prueba.
+        2. Escribir `Ana`.
+        3. Dejar el correo vacío.
+        4. Escribir `Abcd1234`.
+        5. Pulsar **Registrarse**.
+        6. Revisar mensaje y panel de resultados.
+
+        ### Resultado esperado
+        `El correo es obligatorio`. Cuenta: **No**. Total: **0**.
+
+        ### Resultado observado
+        `Registro exitoso`. Cuenta: **Sí**. Total: **1**. El panel indica correo `(vacío)` y el último registro `Cuenta 1 · Ana · (correo vacío)`.
+
+        ### Estado
+        **FALLIDO** — permite registrar sin correo, contra RF-02.
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Evidencia de ejecución
+      description: "La captura está en evidencias/CP-02_evidencia.png. Reemplace USUARIO/REPOSITORIO por el repositorio real."
+      value: "![Evidencia de ejecución CP-02](https://raw.githubusercontent.com/USUARIO/REPOSITORIO/main/evidencias/CP-02_evidencia.png)"
+    validations:
+      required: true

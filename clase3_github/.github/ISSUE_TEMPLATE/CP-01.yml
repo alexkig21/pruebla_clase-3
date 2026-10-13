@@ -1,0 +1,46 @@
+name: "CP-01 — Registro con datos válidos"
+description: "Caso positivo de TS-01 / RF-01."
+title: "[CP-01] Registro con datos válidos"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Práctica:** Clase 3 — TS-01 · **Versión:** v1 · HTML local · Demostración
+
+        **Requisito:** RF-01 — Registro válido · **Tipo:** Positivo
+  - type: markdown
+    attributes:
+      value: |
+        ### Precondiciones
+        - Abrir `app/registro_v1.html`.
+        - Pulsar **Reiniciar prueba** y confirmar total 0.
+
+        ### Datos de prueba
+        - Nombre: `Ana`
+        - Correo: `ana@example.com`
+        - Contraseña ficticia: `Abcd1234` (8 caracteres)
+
+        ### Pasos
+        1. Reiniciar la prueba.
+        2. Escribir `Ana`.
+        3. Escribir `ana@example.com`.
+        4. Escribir `Abcd1234`.
+        5. Pulsar **Registrarse**.
+        6. Revisar mensaje y panel de resultados.
+
+        ### Resultado esperado
+        `Registro exitoso`. Cuenta: **Sí**. Total: **1**.
+
+        ### Resultado observado
+        `Registro exitoso`. Cuenta: **Sí**. Total: **1**.
+
+        ### Estado
+        **APROBADO** — el resultado coincide con el esperado.
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Evidencia de ejecución
+      description: "La captura está en evidencias/CP-01_evidencia.png. Reemplace USUARIO/REPOSITORIO por el repositorio real."
+      value: "![Evidencia de ejecución CP-01](https://raw.githubusercontent.com/USUARIO/REPOSITORIO/main/evidencias/CP-01_evidencia.png)"
+    validations:
+      required: true
